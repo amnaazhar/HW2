@@ -9,14 +9,6 @@
   = submit_tag 'Refresh'
 
 
-// = form_tag movies_path, id: "ratings_form", :method => :get do
-//   Include: 
-//   - @all_ratings.each do |rating|
-//     = rating
-//     = check_box_tag "ratings_#{rating}", "1", 
-//       (@ratings? @ratings.include?(rating) : true) #all checked initially with hash 1
-//   = submit_tag 'Refresh', id: "ratings_submit"
-
 %table#movies
   %thead
     %tr

@@ -16,13 +16,8 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.order(params[:sort])
-    # @movies = Movie.all
+    @hilite = "hilite"
     @all_ratings = ["G", "PG", "PG-13", "R", "NC-17"]
-    # if params[:sort_by] == "title" || params[:sort_by] == "release_date"
-    #   @movies = Movie.order(params[:sort])
-    # # elsif params[:sort_by] == "release_date"
-    # #   @movies = @movies.sort_by &:release_date
-    # end
      if !(params[:ratings].nil?)
        @movies = @movies.find_all{ |m| params[:ratings].has_key?(m.rating) }
      end
