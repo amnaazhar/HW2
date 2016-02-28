@@ -1,0 +1,19 @@
+%h1 Update Movie
+
+= form_tag upAttempt_path, :method => :get do
+
+  = label :movie, :title, 'Old Title'
+  = text_field :movie2update, 'title'
+
+  = label :movie, :title, 'New Title'
+  = text_field :movie, 'title'
+
+  = label :movie, :rating, 'Rating'
+  = select :movie, :rating, ['G','PG','PG-13','R','NC-17']
+
+  = label :movie, :release_date, 'Released On'
+  = date_select :movie, :release_date
+
+  = submit_tag 'Update Movie'
+  
+= link_to 'Back to movie list', movies_path
